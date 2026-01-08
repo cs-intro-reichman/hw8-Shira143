@@ -43,11 +43,12 @@
 
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
-        for (int i = 0; i < follows.length; i++) {
-            if(follows[i].equals(name))
-                return true;
+       for (int i = 0; i < fCount; i++) {
+        if (follows[i].equalsIgnoreCase(name)) { 
+            return true;
         }
-        return false;
+    }
+    return false;
     }
     /** Makes this user follow the given name. If successful, returns true. 
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
