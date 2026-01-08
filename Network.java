@@ -64,7 +64,7 @@ public class Network {
     if (name1.equalsIgnoreCase(name2)) return false; 
     User user1 = getUser(name1); 
     User user2 = getUser(name2); 
-    
+    if (user1 == null || user2 == null) return false;
     return user1.addFollowee(name2);
 }
     
