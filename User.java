@@ -95,8 +95,8 @@
     /** Checks is this user is a friend of the other user.
      *  (if two users follow each other, they are said to be "friends.") */
     public boolean isFriendOf(User other) {
-        return (other.follows(name) && (follows(other.name)));
-    }
+    return other.follows(this.name) && this.follows(other.getName());   
+ }
     /** Returns this user's name, and the names that s/he follows. */
     public String toString() {
         String ans = name + " -> ";
